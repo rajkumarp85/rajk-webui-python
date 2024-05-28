@@ -6,7 +6,10 @@ on:
 #creating jobs
 jobs:
   rajk-python-app-test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest,windows-latest,macos-latest]
     steps:
       - name : checking python version 
         run: python -V
