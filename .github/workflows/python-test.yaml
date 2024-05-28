@@ -1,0 +1,12 @@
+name: CI workflow for python app
+on:
+  push:
+    branches:
+      - "main"
+#creating jobs
+jobs:
+  rajk-python-app-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name : checking python version 
+        run: python -V
